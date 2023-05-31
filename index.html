@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page using HTML and CSS</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style1.css">
+<style>
+     body{
+        font-family: 'Ubuntu';
+        color: aliceblue;
+        margin: 0px;
+        padding: 0px;
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0, 0, 0, 0.2)),url('/images/img2.png');
+        background-repeat: no-repeat;
+        background-size: 1600px 800px;
+    }
+    /* by default egulo block element hisebe thakbe tai eta niche niche show korbe box gulo tai display inline block korte hbe ar jetar position jekhane korar vdorkar sei onujayi position dite hobe */
+    .left{
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        top: 14px;
+       /* border: 3px solid red; */ 
+     }
+    .mid{
+        display: block;
+        width: 35%;
+        margin: 14px auto; /* top x-axis */
+    /*    border: 3px solid green;*/
+    }
+    .right{
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        top: 14px;
+     /*   border: 3px solid yellow;*/
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 16px;
+    }
+    .navbar li a{
+        color: aliceblue;
+        text-decoration: none;
+        padding: 31px 23px;
+        position: relative;
+    }
+    .navbar li a::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background:rgb(255, 0, 208);
+        position: absolute;
+        left: 0;
+        bottom: 19px;
+        transition: 0.5s;
+    }
+    .navbar li a:hover::after{
+        width: 90%;
+    }
+    .left img{
+        width: 136px;
+        filter: invert(100%);
+    }
+    .left div{
+        text-align: center;
+        font-family: 'Ubuntu';
+    }
+    .btn{
+        font-family: 'Ubuntu';
+        margin: 0px 9px;
+        background-color: black;
+        color: aliceblue;
+        padding: 4px 14px;
+        border: 2px solid rgb(255, 0, 179);
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .btn:hover{
+       background-color: rgb(255, 0, 179);
+    }
+    .container{
+       /* border: 2px solid white;*/
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%,-50%);
+        text-align: center;
+        position: absolute;
+        max-width: 650px;
+    }
+    /* display block kore width set kore margin x-axis ta auto korle center hoye jay */
+    .container h1{
+        text-align: center;
+        font-size: 3.5em;
+    }
+    .container span{
+        letter-spacing: 5px;
+    }
+    .container a{
+        text-decoration: none;
+        background-color: rgb(255, 0, 179);
+        color: aliceblue;
+        padding: 10px 20px;
+        letter-spacing: 5px;
+        transition: 0.4s;
+    }
+    .container a:hover{
+        background: transparent;
+        border: 1px solid ;
+    }
+    /*@media only screen and (max-width: 400px){
+        body{
+            background: linear-gradient(rgba(0,0,0,0.8),rgba(0, 0, 0, 0.2)),url('/images/img2.png'); 
+        }
+        .navbar li a{
+           display: block;
+        }
+
+    }*/
+</style>
+<body>
+    <header class="header"> <!--/*header.header*/--> 
+        <!--Left box for logo-->
+         <div class="left"> <!--/*div.left*/-->
+             <div style="
+                 line-height: 49px;
+                 font-size: 22px;">TouriQuest</div> <!--image theke lekhar modheykar gap komate-->
+         </div>
+        <!--Mid box for navbar-->
+         <div class="mid"> 
+             <ul class="navbar">
+                 <li><a href="#" class="a">Home</a></li>
+                 <li><a href="#" class="a">About Us</a></li>
+                 <li><a href="#" class="a">Gallery</a></li>
+                 <li><a href="#" class="a">Best Offers</a></li>
+             </ul>
+         </div>
+        <!--Right box for buttons-->
+         <div class="right">
+         <ul class="navbar">
+            <li><a href="#" class="a">Call</a></li>
+            <li><a href="#" class="a">Email</a></li>
+         </ul>
+         <button class="btn">Register</button>
+         </div>
+     </header>
+     <div class="container">
+        <span>Enjoy</span>
+         <h1>Travel and Explore with us</h1>
+         <a href="#">Book your Trip</a>
+     </div> 
+</body>
+</html>
